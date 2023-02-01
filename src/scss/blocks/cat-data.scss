@@ -1,0 +1,130 @@
+.cat-data {
+  display: flex;
+  flex-direction: column;
+
+  justify-content: space-between;
+  row-gap: 14px;
+
+  padding: 0;
+  margin: 39px auto 24px;
+
+  color: $font-color;
+
+  border: none;
+
+  width: $mobile-width-only - $mobile-gap - $mobile-gap;
+  max-width: 280px;
+
+  @media (min-width: $tablet-width) {
+    width: 92%;
+    max-width: $desktop-width;
+    padding: 0 36px 0 40px;
+    margin: 61px auto 40px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 100%;
+    max-width: 700px;
+    margin: 66px 0 60px;
+    padding: 0;
+  }
+}
+
+.cat-data__age,
+.cat-data__weight,
+.cat-data__name {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cat-data__name-label,
+.cat-data__weight-label,
+.cat-data__age-label {
+  display: block;
+  font-family: $font, "Arial", sans-serif;
+  font-style: $font-style;
+  font-weight: $font-weight;
+  font-size: 16px;
+  line-height: 16px;
+  text-transform: uppercase;
+  color: #444444;
+
+  white-space: nowrap;
+
+  padding-right: 18px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-bottom: 0;
+  }
+}
+
+.cat-data__name-input,
+.cat-data__weight-input,
+.cat-data__age-input {
+  padding: 10px 10px 11px 14px;
+  flex-grow: 1;
+  flex-basis: 70%;
+
+  margin: 0;
+
+  font-family: $font, "Arial", sans-serif;
+  font-style: $font-style;
+  font-weight: $font-weight;
+  font-size: 16px;
+  line-height: 16px;
+  text-transform: uppercase;
+
+  color: #444444;
+
+  border: none;
+  outline: 1px solid hsl(0, 0%, 91%);
+
+  @media (min-width: $tablet-width) {
+    padding: 13px 10px 14px 13px;
+    font-size: 20px;
+    line-height: 30px;
+
+    margin-left: 2px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 10px;
+
+    margin-left: 5px;
+  }
+
+  &:hover {
+    outline: 1px solid hsl(0, 0%, 80%);
+  }
+
+  &:focus {
+    outline: 2px solid hsl(0, 0%, 27%);
+  }
+
+  &:invalid {
+    outline: 2px solid hsl(0, 100%, 75%);
+  }
+}
+
+.cat-data__weight-input,
+.cat-data__age-input {
+  @media (min-width: $tablet-width) {
+    margin-left: 3px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-left: 2px;
+  }
+}
+
+.cat-data__weight-input {
+  @media (min-width: $desktop-width) {
+    padding-left: 19px;
+  }
+}
